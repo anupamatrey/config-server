@@ -20,7 +20,7 @@ before_script:
   - docker login --username=$HEROKU_LOGIN --password=$HEROKU_API_KEY registry.heroku.com
   - export IMAGE_NAME=anupamattrey/config-service
   - docker build -t $IMAGE_NAME:$COMMIT .
-  - docker tag $IMAGE_NAME:$COMMIT $IMAGE_NAME:$TAG registry.heroku.com/$HEROKU_APP/web
+  - docker tag $IMAGE_NAME:$COMMIT registry.heroku.com/$HEROKU_APP/web
   - docker push registry.heroku.com/$HEROKU_APP/web;
 
 before_install:
